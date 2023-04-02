@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="http://localhost:1313/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mark McFate">
+    <meta name="description" content="Personal weblog of web professional, geocacher, camper, and volunteer, Mark McFate.">
+    <meta name="generator" content="Hugo 0.111.2">
+
+    
+    <title>Proper Python &middot; @Summitt Dweller’s Personal Blog</title>
+
+    <link rel="stylesheet" href="http://localhost:1313/css/weblog.css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.2.14/css/lightgallery.min.css" type="text/css" />
+    <link rel="stylesheet" href="http://localhost:1313/css/custom.css" media="screen" charset="utf-8" type="text/css" />
+
+
+    
+	    <link href="http://localhost:1313/index.xml" rel="alternate" type="application/rss+xml" title="Personal Blog" />
+	  
+
+    
+        
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+      crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin=""></script>
+
+
+<link rel="stylesheet" href="https://unpkg.com/@raruto/leaflet-elevation@1.1.1/dist/leaflet-elevation.css" />
+<script src="http://localhost:1313/js/leaflet.elevation.js"></script>
+
+
+<script src="http://localhost:1313/js/leaflet.hugo.js"></script>
+
+
+<link rel="stylesheet" href="http://localhost:1313/css/leaflet.extra-markers.min.css">
+<script src="http://localhost:1313/js/leaflet.extra-markers.min.js"></script>
+
+<style>
+    .fa-icon-marker {
+        text-align: center;
+        width: 100%;
+    }
+    .download-track {
+        background-color: #e1e1e1;
+        text-align: center;
+        margin-bottom: 25px;
+        border-radius: 0 0 10px 10px;
+        cursor: pointer;
+    }
+</style>
+
+    
+    <script src="http://localhost:1313/js/checkTweetDate.js" type="text/javascript"></script>
+
+    
+    <script>
+      var _paq = window._paq = window._paq || [];
+       
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+        var u="//analytics.summittservices.com/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '10']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+
+  </head>
+  <body class="site">
+
+<header>
+  <nav>
+    <h1><a href="http://localhost:1313/">@Summitt Dweller</a>’s Personal Blog.</h1>
+    <div class="menu">
+		
+			
+			<ul>
+				
+				<li>
+					<a href="http://localhost:1313/microposts/">Microposts</a>
+					
+						<a href="http://localhost:1313/microposts/index.xml"><img src="http://localhost:1313/img/rss.svg" class="rss-icon" /></a>
+					
+				</li>
+				
+				<li>
+					<a href="../../../index.html">Posts</a>
+					
+						<a href="../../../index.xml"><img src="http://localhost:1313/img/rss.svg" class="rss-icon" /></a>
+					
+				</li>
+				
+				<li>
+					<a href="http://localhost:1313/photos/">Photos</a>
+					
+						<a href="http://localhost:1313/photos/index.xml"><img src="http://localhost:1313/img/rss.svg" class="rss-icon" /></a>
+					
+				</li>
+				
+				<li>
+					<a href="http://localhost:1313/onetabs/">OneTabs</a>
+					
+				</li>
+				
+				
+			</ul>
+		
+    </div>
+  </nav>
+</header>
+
+
+  <main class="content">
+
+    <article class="post">
+      
+        <h2><a rel="full-article" href="index.html">Proper Python</a></h2>
+      
+
+      <div class="postmeta">Posted on <time datetime="2022-09-24 14:26:44 -0500 CDT" pubdate="">September 24, 2022</time>
+        
+          from Toledo, IA
+        
+        <span class="categories">
+          
+        </span>
+      </div>
+
+      <p>
+        <p>What follows is the <code>README.md</code> file from my <em>GitHub</em> repo where <a href="https://blog.summittdweller.com">https://blog.summittdweller.com</a> is built.  It outlines how to &ldquo;properly&rdquo; add Python to a project such that we can create an easily reproducible &ldquo;virtual environment&rdquo; without storing the necessary Python libraries in <em>GitHub</em>.</p>
+<p>From the <code>README.md</code>&hellip;</p>
+
+<div class="original"><h1 id="blogs-summittdweller">blogs-SummittDweller</h1>
+<p>The Python portions of this repo were gleaned from <a href="https://github.com/SummittDweller/hikes">https://github.com/SummittDweller/hikes</a>.
+This is the repo for my <a href="https://blog.SummittDweller.com/">https://blog.SummittDweller.com/</a> static website.</p>
+<h2 id="latest-python-improvements">Latest Python Improvements</h2>
+<p>Using guidance at <a href="https://predictivehacks.com/how-to-work-with-vs-code-and-virtual-environments-in-python/">https://predictivehacks.com/how-to-work-with-vs-code-and-virtual-environments-in-python/</a> I successfully created a new <code>.venv</code> virtual environment.  The commands I used to do this were&hellip;</p>
+<pre tabindex="0"><code>╭─mark@Marks-Mac-Mini ~/GitHub/blogs-SummittDweller ‹main*›
+╰─$ python3 -m venv .venv
+
+╭─mark@Marks-Mac-Mini ~/GitHub/blogs-SummittDweller ‹main*›
+╰─$ source .venv/bin/activate
+
+(.venv) ╭─mark@Marks-Mac-Mini ~/GitHub/blogs-SummittDweller ‹main› 
+╰─$ pip3 freeze &gt; python-requirements.txt
+
+(.venv) ╭─mark@Marks-Mac-Mini ~/GitHub/blogs-SummittDweller ‹main*›
+╰─$ pip3 install -r python-requirements.txt
+</code></pre><p>Then I used <code>COMMAND-SHIFT-P</code> to select and <code>Python: Select interpreter</code> to choose the new <code>.venv</code> Python.  After that&hellip;</p>
+<pre tabindex="0"><code>(.venv) ╭─mark@Marks-Mac-Mini ~/GitHub/blogs-SummitDweller ‹main*›
+╰─$ python3 consolidate.py --start 20220806 --end 20220825
+
+(.venv) ╭─mark@Marks-Mac-Mini ~/GitHub/blogs-SummitDweller ‹main*›
+╰─$ hugo server
+</code></pre><h2 id="rebuilding-a-local-environment">Rebuilding a Local Environment</h2>
+<p>Based on guideance from <a href="https://stackoverflow.com/questions/6590688/is-it-bad-to-have-my-virtualenv-directory-inside-my-git-repository">https://stackoverflow.com/questions/6590688/is-it-bad-to-have-my-virtualenv-directory-inside-my-git-repository</a> I&rsquo;ve reconstructed this project such that Python artifacts do NOT propogate into Github.</p>
+<p>The project should automatically &ldquo;rebuild&rdquo; as necessary when opened in VSCode, but if the Python virtual environment needs to be recreated use&hellip;</p>
+<pre tabindex="0"><code>source .venv/bin/activate &amp;&amp; pip3 install -r python-requirements.txt
+</code></pre><h2 id="deployment-via-digitalocean">Deployment via DigitalOcean</h2>
+<p>In order to deploy this <code>starter</code> static app on <em>DigitalOcean</em> I had to PERMANENTLY move all of my Python components (<code>.py</code> scripts and <code>requirements.txt</code>) to a <code>.python</code> directory to hide it from view during app creation.  Before moving these elements <em>DigitalOcean</em> would consistently try to deploy my app as Python, and that&rsquo;s not right.</p>
+<p>See <em>DigitalOcean</em> ticket [#06849069] <code>Hugo static site with Python components builds fail</code> for details.</p>
+<p>The response I received from <em>DigitalOcean</em>&hellip;</p>
+<div class="original"><p>Hello,</p>
+<p>Thanks for contacting DigitalOcean.</p>
+<p>We appreciate you reaching out to us about your Hugo static site. From what you mentioned it does sound like your app is getting detected as a python webservice rather then a static site due to the requirements.txt file you had in the root of your repo.</p>
+<p>Unfortunately this is currently what App platform uses to detect applications as python apps. Either having a requirements.txt file or a setup.py file will cause that detection. Our engineers are looking into options to specify the build pack used rather then relying upon the auto detection, which would address this issue in your case, but don&rsquo;t have a timeline yet for implementing it.</p>
+<p>In the mean time the work around that you have specified here should work fine for this. It should cause the app to be detected as a static site rather then python. Hopefully it isn&rsquo;t impacting anything else in your app&rsquo;s build process.</p>
+<p>If you have any questions, please let us know.</p>
+<p>Regards,
+Nate
+Senior Cloud Support Engineer
+Check out our community for great tutorials, articles and FAQs!
+digitalocean.com/community</p>
+<p>ref:_00Df218t5m._5004P21l4JM:ref</p>
+</div>
+<h3 id="remedy">Remedy</h3>
+<p>Based on the response above I&rsquo;m making final changes to eliminate the <code>.python</code> folder, renaming <code>.python/requirements.txt</code> as <code>python-requirements.txt</code>, and pulling all other contents of <code>.python</code> into the root of the project.</p>
+</div>
+
+
+      </p>
+    </article>
+
+
+  </main>
+
+<footer>
+  <div class="footer_text">
+      <div>
+        <h3>Hi, <a href="index.html">I'm Mark</a></h3>
+        <p>
+          My real name is Mark McFate. <b>Summitt Dweller</b> was originally my <i>Geocaching.com</i> player name, and it still is, but I've applied it to a number of other pursuits over the years.  So, welcome to my personal blog.  FYI: I also have a "professional" blog at https://static.grinnell.edu/dlad-blog for all things related to my "real" work at Grinnell College, where I've been the 'Digital Library Applications Developer' since September 2012.
+
+        </p>
+      </div>
+      
+      <div>
+          <h3><a href="https://www.flickr.com/photos/97761917@N02/">Photo Stream</a></h3>
+          <div id="photos"></div>
+        </div>
+      </div>
+      
+  </div>
+
+  <hr/>
+  <div class="build-info">Updated: Apr 1, 2023 at 8:47am CDT</div>
+
+  
+    <div class="footer_copyright">
+      &copy; 2023 <a href="index.html">Mark McFate</a>
+       - Made in Toledo, Iowa
+    </div>
+  
+</footer>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/2.2.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.2.14/js/lightgallery-all.min.js" charset="utf-8"></script>
+    <script src="http://localhost:1313/js/weblog.js" charset="utf-8"></script>
+    
+
+    <script type="text/javascript">
+
+  
+  $(function() {
+    
+    $.getJSON("https://api.flickr.com/services/feeds/photos_public.gne?id=97761917@N02&format=json&jsoncallback=?", function(data) {
+      iweblog.application.displayImages(data, 8);
+    });
+  });
+
+</script>
+
+    
+
+    
+    
+    
+    
+  </body>
+</html>
+

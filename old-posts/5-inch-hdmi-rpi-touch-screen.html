@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="http://localhost:1313/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mark McFate">
+    <meta name="description" content="Personal weblog of web professional, geocacher, camper, and volunteer, Mark McFate.">
+    <meta name="generator" content="Hugo 0.111.2">
+
+    
+    <title>5-Inch HDMI Raspberry Pi Touch Screen &middot; @Summitt Dweller’s Personal Blog</title>
+
+    <link rel="stylesheet" href="http://localhost:1313/css/weblog.css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.2.14/css/lightgallery.min.css" type="text/css" />
+    <link rel="stylesheet" href="http://localhost:1313/css/custom.css" media="screen" charset="utf-8" type="text/css" />
+
+
+    
+	    <link href="http://localhost:1313/index.xml" rel="alternate" type="application/rss+xml" title="Personal Blog" />
+	  
+
+    
+        
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+      crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin=""></script>
+
+
+<link rel="stylesheet" href="https://unpkg.com/@raruto/leaflet-elevation@1.1.1/dist/leaflet-elevation.css" />
+<script src="http://localhost:1313/js/leaflet.elevation.js"></script>
+
+
+<script src="http://localhost:1313/js/leaflet.hugo.js"></script>
+
+
+<link rel="stylesheet" href="http://localhost:1313/css/leaflet.extra-markers.min.css">
+<script src="http://localhost:1313/js/leaflet.extra-markers.min.js"></script>
+
+<style>
+    .fa-icon-marker {
+        text-align: center;
+        width: 100%;
+    }
+    .download-track {
+        background-color: #e1e1e1;
+        text-align: center;
+        margin-bottom: 25px;
+        border-radius: 0 0 10px 10px;
+        cursor: pointer;
+    }
+</style>
+
+    
+    <script src="http://localhost:1313/js/checkTweetDate.js" type="text/javascript"></script>
+
+    
+    <script>
+      var _paq = window._paq = window._paq || [];
+       
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+        var u="//analytics.summittservices.com/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '10']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+
+  </head>
+  <body class="site">
+
+<header>
+  <nav>
+    <h1><a href="http://localhost:1313/">@Summitt Dweller</a>’s Personal Blog.</h1>
+    <div class="menu">
+		
+			
+			<ul>
+				
+				<li>
+					<a href="http://localhost:1313/microposts/">Microposts</a>
+					
+						<a href="http://localhost:1313/microposts/index.xml"><img src="http://localhost:1313/img/rss.svg" class="rss-icon" /></a>
+					
+				</li>
+				
+				<li>
+					<a href="../../../index.html">Posts</a>
+					
+						<a href="../../../index.xml"><img src="http://localhost:1313/img/rss.svg" class="rss-icon" /></a>
+					
+				</li>
+				
+				<li>
+					<a href="http://localhost:1313/photos/">Photos</a>
+					
+						<a href="http://localhost:1313/photos/index.xml"><img src="http://localhost:1313/img/rss.svg" class="rss-icon" /></a>
+					
+				</li>
+				
+				<li>
+					<a href="http://localhost:1313/onetabs/">OneTabs</a>
+					
+				</li>
+				
+				
+			</ul>
+		
+    </div>
+  </nav>
+</header>
+
+
+  <main class="content">
+
+    <article class="post">
+      
+        <h2><a rel="full-article" href="index.html">5-Inch HDMI Raspberry Pi Touch Screen</a></h2>
+      
+
+      <div class="postmeta">Posted on <time datetime="2021-02-05 00:00:00 &#43;0000 UTC" pubdate="">February 5, 2021</time>
+        
+          from Toledo,IA
+        
+        <span class="categories">
+          
+        </span>
+      </div>
+
+      <p>
+        <p>A couple of years have now passed since I purchased an <a href="https://www.amazon.com/Elecrow-Display-Monitor-800x480-Raspberry/dp/B013JECYF2/ref=as_li_ss_tl?ie=UTF8&amp;linkCode=ll1&amp;tag=mmjjg-20&amp;linkId=df2d8e154ca1d5ca9fb992d34677ebd3">Elecrow 5&quot; HDMI Touchscreen display for the Raspberry Pi</a> and put it to use.  I even 3D printed a very nice case for it.  So, there&rsquo;s a bit of configuration code on the SD card that can be edited to determine if the 5&quot; screen is active, or if the RPI&rsquo;s output is directed to its HDMI output port.  Well, in the last 2 years I forgot what to edit and what changes to make.</p>
+<p>Fortunately, when I went looking for some info to refresh my memory, I found a great resource&hellip; a review posted in 2016 from none other than <a href="https://www.jeffgeerling.com/">Jeff Geerling</a>, aka <a href="https://github.com/geerlingguy">geerlingguy</a>.  His review/blog post is <a href="https://www.jeffgeerling.com/blog/2016/review-elecrow-hdmi-5-800x480-tft-display-xpt2046-touch-controller">Review: Elecrow HDMI 5&quot; 800x480 TFT Display with XPT2046 Touch Controller</a>.  In case Jeff&rsquo;s post should ever disappear, here&rsquo;s the a key piece of info that I needed to jog my memory:</p>
+
+<div class="original"><h2 id="getting-full-resolution-over-hdmi">Getting full resolution over HDMI</h2>
+<p>When I first booted the Pi attached to the display, there was a large white area on the right, and only the left portion of the screen was being used by the Pi (it was only using 640x480 of the 800x480 display). To fix this, you have to set a few display options in the configuration file the Raspberry Pi reads during startup to switch certain hardware settings.</p>
+<p>Edit /boot/config.txt (either while booted into Raspbian, or on another computer directly on the microSD card), making sure the following values are set:</p>
+<pre tabindex="0"><code># uncomment if you get no picture on HDMI for a 
+# default &#34;safe&#34; mode
+#hdmi_safe=1
+
+# uncomment this if your display has a black border of unused 
+# pixels visible and your display can output without overscan
+disable_overscan=0
+
+# uncomment if hdmi display is not detected and composite 
+# is being output
+#hdmi_force_hotplug=1
+
+# uncomment to force a specific HDMI mode (this will force VGA)
+hdmi_group=2
+hdmi_mode=1
+hdmi_mode=87
+hdmi_cvt=800 480 60 6 0 0 0
+</code></pre><p>Reboot the Pi either via the UI or by entering sudo reboot in the Terminal. Once rebooted, the Pi should fill up the full 800x480 display.</p>
+<blockquote>
+<p>Note: If the Pi boots up to a funny-looking screen and you can&rsquo;t see anything, you can either reformat the microSD card, or pull it, edit the /boot/config.txt file from another computer to fix it, and put it back in the Pi.</p>
+</blockquote>
+</div>
+
+
+      </p>
+    </article>
+
+
+  </main>
+
+<footer>
+  <div class="footer_text">
+      <div>
+        <h3>Hi, <a href="index.html">I'm Mark</a></h3>
+        <p>
+          My real name is Mark McFate. <b>Summitt Dweller</b> was originally my <i>Geocaching.com</i> player name, and it still is, but I've applied it to a number of other pursuits over the years.  So, welcome to my personal blog.  FYI: I also have a "professional" blog at https://static.grinnell.edu/dlad-blog for all things related to my "real" work at Grinnell College, where I've been the 'Digital Library Applications Developer' since September 2012.
+
+        </p>
+      </div>
+      
+      <div>
+          <h3><a href="https://www.flickr.com/photos/97761917@N02/">Photo Stream</a></h3>
+          <div id="photos"></div>
+        </div>
+      </div>
+      
+  </div>
+
+  <hr/>
+  <div class="build-info">Updated: Apr 1, 2023 at 8:47am CDT</div>
+
+  
+    <div class="footer_copyright">
+      &copy; 2023 <a href="index.html">Mark McFate</a>
+       - Made in Toledo, Iowa
+    </div>
+  
+</footer>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/2.2.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.2.14/js/lightgallery-all.min.js" charset="utf-8"></script>
+    <script src="http://localhost:1313/js/weblog.js" charset="utf-8"></script>
+    
+
+    <script type="text/javascript">
+
+  
+  $(function() {
+    
+    $.getJSON("https://api.flickr.com/services/feeds/photos_public.gne?id=97761917@N02&format=json&jsoncallback=?", function(data) {
+      iweblog.application.displayImages(data, 8);
+    });
+  });
+
+</script>
+
+    
+
+    
+    
+    
+    
+  </body>
+</html>
+

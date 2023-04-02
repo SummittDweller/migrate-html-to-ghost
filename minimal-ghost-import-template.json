@@ -1,0 +1,12 @@
+{
+  "meta": {
+    "exported_on": ${epoch},
+    "version": "5.39.0"
+  },
+  "data": {
+    "posts": [
+      ${post_data}
+    ]
+  }
+}
+

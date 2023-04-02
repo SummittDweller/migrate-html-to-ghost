@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="http://localhost:1313/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mark McFate">
+    <meta name="description" content="Personal weblog of web professional, geocacher, camper, and volunteer, Mark McFate.">
+    <meta name="generator" content="Hugo 0.111.2">
+
+    
+    <title>Moving to Netlify CMS &middot; @Summitt Dweller’s Personal Blog</title>
+
+    <link rel="stylesheet" href="http://localhost:1313/css/weblog.css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.2.14/css/lightgallery.min.css" type="text/css" />
+    <link rel="stylesheet" href="http://localhost:1313/css/custom.css" media="screen" charset="utf-8" type="text/css" />
+
+
+    
+	    <link href="http://localhost:1313/index.xml" rel="alternate" type="application/rss+xml" title="Personal Blog" />
+	  
+
+    
+        
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+      crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin=""></script>
+
+
+<link rel="stylesheet" href="https://unpkg.com/@raruto/leaflet-elevation@1.1.1/dist/leaflet-elevation.css" />
+<script src="http://localhost:1313/js/leaflet.elevation.js"></script>
+
+
+<script src="http://localhost:1313/js/leaflet.hugo.js"></script>
+
+
+<link rel="stylesheet" href="http://localhost:1313/css/leaflet.extra-markers.min.css">
+<script src="http://localhost:1313/js/leaflet.extra-markers.min.js"></script>
+
+<style>
+    .fa-icon-marker {
+        text-align: center;
+        width: 100%;
+    }
+    .download-track {
+        background-color: #e1e1e1;
+        text-align: center;
+        margin-bottom: 25px;
+        border-radius: 0 0 10px 10px;
+        cursor: pointer;
+    }
+</style>
+
+    
+    <script src="http://localhost:1313/js/checkTweetDate.js" type="text/javascript"></script>
+
+    
+    <script>
+      var _paq = window._paq = window._paq || [];
+       
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+        var u="//analytics.summittservices.com/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '10']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+
+  </head>
+  <body class="site">
+
+<header>
+  <nav>
+    <h1><a href="http://localhost:1313/">@Summitt Dweller</a>’s Personal Blog.</h1>
+    <div class="menu">
+		
+			
+			<ul>
+				
+				<li>
+					<a href="http://localhost:1313/microposts/">Microposts</a>
+					
+						<a href="http://localhost:1313/microposts/index.xml"><img src="http://localhost:1313/img/rss.svg" class="rss-icon" /></a>
+					
+				</li>
+				
+				<li>
+					<a href="../../../index.html">Posts</a>
+					
+						<a href="../../../index.xml"><img src="http://localhost:1313/img/rss.svg" class="rss-icon" /></a>
+					
+				</li>
+				
+				<li>
+					<a href="http://localhost:1313/photos/">Photos</a>
+					
+						<a href="http://localhost:1313/photos/index.xml"><img src="http://localhost:1313/img/rss.svg" class="rss-icon" /></a>
+					
+				</li>
+				
+				<li>
+					<a href="http://localhost:1313/onetabs/">OneTabs</a>
+					
+				</li>
+				
+				
+			</ul>
+		
+    </div>
+  </nav>
+</header>
+
+
+  <main class="content">
+
+    <article class="post">
+      
+        <h2><a rel="full-article" href="index.html">Moving to Netlify CMS</a></h2>
+      
+
+      <div class="postmeta">Posted on <time datetime="2021-04-04 20:14:08 -0500 CDT" pubdate="">April 4, 2021</time>
+        
+          from Toledo, IA
+        
+        <span class="categories">
+          
+        </span>
+      </div>
+
+      <p>
+        <p>In my last post, <a href="http://localhost:1313/posts/2021/04/moving-to-netlify-cms/posts/2021/03/adding-netlify-to-this-blog/">Adding <em>Netlify CMS</em> for Editing This Blog</a>, I was able to successfully engage the <a href="https://www.netlifycms.org/"><em>Netlify CMS</em></a> with a &ldquo;local&rdquo; copy of this blog.  But I never got the CMS to work in production with this blog&rsquo;s App on <a href="https://www.digitalocean.com/"><em>DigitalOcean</em></a> (<em>DO</em>). I should note that <em>DO</em>&rsquo;s support folks were very helpful, but in the end I think all of the client-side stuff that <em>Netlify CMS</em> is doing was more than they were willing (capable?) of helping me overcome. That&rsquo;s probably my fault more than their&rsquo;s; client-side isn&rsquo;t my strong suit.</p>
+<p>In the week since then I have, however, been able to stand up a new working copy of the <a href="https://wieting.Tama-Toledo.com"><em>Wieting Theatre</em> website</a> on <a href="https://www.netlify.com/"><em>Netlify.com</em></a>, where it enjoys the same kind of automated builds and automatic deployment that I previously found at <em>DO</em>.  The big difference, at Netlify.com my <em>Netlify CMS</em> depoloyment works locally AND in production, giving me the ability to allow content editors, even those who don&rsquo;t have a <em>Netlify.com</em> or <em>GitHub</em> account, to do what they do best, edit their content.</p>
+<h2 id="the-_wieting-theatre_s-new-site-and-the-_crb_">The <em>Wieting Theatre</em>&rsquo;s New Site, and the <em>CRB</em></h2>
+<p>So this post started as a brain dump, chronicling how I got <a href="https://Wieting.Tama-Toledo.com">https://Wieting.Tama-Toledo.com</a> to work.  But, instead of hashing out how I &ldquo;did&rdquo; it, I&rsquo;m going to show you how I&rsquo;m doing something similar, for a site that features the <em>Compass Rose Band</em>, or <em>CRB</em>, my brother-in-law&rsquo;s band out of Cedar Rapids, Iowa.</p>
+<h2 id="netlify-identity">Netlify Identity</h2>
+<p>I think the real key to all of this is a <em>Netlify.com</em> agent called <a href="https://docs.netlify.com/visitor-access/identity/"><em>Netlify Identity</em></a>. From the <em>Netlify.com</em> site and documentation&hellip;</p>
+
+<div class="original"><p><em>Netlify Identity</em> service brings a full suite of authentication functionality, backed by the <em>GoTrue</em> API. This allows you to manage and authenticate users on your site or app, without requiring them to be users of <em>Netlify</em> or any other service. You can use this for gated content, site administration, and more.</p>
+</div>
+
+<p>In theory, <em>Netlify Identity</em> can be deployed anywhere, but in practice, setting it up can be quite tricky (at least it was for me).  That&rsquo;s where <em>Netlify.com</em> shines, and that&rsquo;s understandable since they created both <em>Netlify CMS</em> and <em>Netlify Identity</em>. The two creations play well together, and make life easier for a devops like me. Well played indeed.</p>
+<p>If you read my previous post you know that in a <a href="https://gohugo.io"><em>Hugo</em></a> site, like this one, the <code>./static/admin/config.yml</code> file holds all of your CMS info.  If you host content on <em>Netlify.com</em> with <em>Netlify CMS</em> and <em>Netlify Identity</em> engaged, all you really need in that config file is something like this:</p>
+<pre tabindex="0"><code>backend:
+  name: git-gateway
+  branch: main
+...
+</code></pre><p>The rest of the CMS &ldquo;magic&rdquo; takes place in a server-side access manager that you can find at your <em>Netlify.com</em> site folder at <code>https://app.netlify.com/sites/[site-name]/identity</code>.  The client-side of the access/identity equation can be handled with an app template, and you can choose from many starter templates found at <a href="https://www.netlifycms.org/docs/start-with-a-template">Start with a Template</a>.</p>
+<h3 id="external-oauth-without-_netlifycom_">External OAuth without <em>Netlify.com</em></h3>
+<p>If you wish to proceed without using <em>Netlify.com</em> as your host, you&rsquo;ll find a number of options at <a href="https://www.netlifycms.org/docs/external-oauth-clients/">External OAuth Client</a>. Beware, this option isn&rsquo;t for a server-side guy like me, and the <em>Netlify.com</em> option is quick, easy, and cheap&hellip; at least I think so.</p>
+<h2 id="building-a-new-_compass-rose-band_-site-on-_netlifycom_">Building a New <em>Compass Rose Band</em> Site on <em>Netlify.com</em></h2>
+<p>Rather than rehashing the story of my <em>Wieting Theatre</em> migration to <em>Netlify.com</em>, I&rsquo;m going to repeat that process and capture the journey while migrating our existing <em>Compass Rose Band</em> site from <em>DO</em>.</p>
+<h3 id="using-_netlifycom_-and-one-click-hugo-cms">Using <em>Netlify.com</em> and <code>one-click-hugo-cms</code></h3>
+<p>From the <a href="https://www.netlifycms.org/docs/start-with-a-template">Start with a Template</a> I clicked the <code>Deploy to Netlify</code> button under the &lsquo;Hugo Site Starter&rsquo; option. This was super easy since <em>Netlify.com</em> already knows me&hellip; because I created a free account about a week ago. That selection took me to a screen where I was asked to identify a new <em>Github</em> repostory. Again, super easy because I had already logged in to <em>Github</em> earlier.</p>
+<p>The default name for this new repository is <code>one-click-hugo-cms</code>, same as the template repository it will be built from. I choose to name my new repo <code>compass-rose-band-one-click</code>, for obvious reasons. That repository can be found at <a href="https://github.com/SummittDweller/compass-rose-band-one-click">https://github.com/SummittDweller/compass-rose-band-one-click</a> where the <code>README.md</code> file is titled &ldquo;Hugo template for Netlify CMS with Netlify Identity&rdquo;. The initial repository contents looked like this:</p>
+<p><figure>
+  <img src="http://localhost:1313/img/one-click-hugo-cms.png" alt="one-click-hugo-cms">
+  <figcaption></figcaption>
+</figure>
+</p>
+<h3 id="replacing-the-site">Replacing the <code>/site</code></h3>
+<p>A default <em>Hugo</em> site is automatically built and deployed for you as part of the one-click process, and <em>Netlify.com</em> will supply an address so you can see your creation. But that&rsquo;s not the <em>Compass Rose Band</em>! No problem, I found it quick and easy to replace the default template site by first cloning my new repo to my workstation, and replacing the <code>/site</code> directory with my own contents.  It went like this&hellip;</p>
+<ul>
+<li><code>cd ~/GitHub</code>  ⬅ This is where I keep local copies of all my GitHub projects.</li>
+<li><code>git clone https://github.com/SummittDweller/compass-rose-band-one-click</code></li>
+<li><code>cd compass-rose-band-one-click</code></li>
+<li><code>git branch -m master main</code>  ⬅ Optional step, changes my local branch name to &lsquo;main&rsquo;.</li>
+<li><code>rm -fr site/*</code>  ⬅ Remove the template site, the contents of <code>/site</code>.</li>
+<li><code>cp -fr ~/GitHub/compass-rose-band/* site/.</code>  ⬅ Copy my local CRB site<sup>*</sup> to <code>/site</code>.</li>
+</ul>
+<p><sup>*</sup>Note that copying in the manner excludes all . files and directories, so the <code>.git</code> folder is NOT copied. This is IMPORTANT!</p>
+<p>At this point, your old site has a new home in <code>./site</code> so if you navigate there and do <code>hugo server</code> you should see a local instance of the site.  Like so&hellip;</p>
+<ul>
+<li><code>cd site</code></li>
+<li><code>hugo server</code></li>
+<li>Visit <code>localhost:1313</code>, or whatever localhost site is indicated, to see your site.</li>
+</ul>
+<h3 id="pushing-the-site-to-_github_">Pushing the Site to <em>Github</em></h3>
+<p>So, now your <em>Netlify.com</em> project lives in a directory like my <code>~/GitHub/compass-rose-band-one-click</code>, and the corresponding <em>Hugo</em> site contents are in the <code>./site</code> folder there. To deploy this new copy of your site to <em>Netlify.com</em> simply do like this&hellip;</p>
+<ul>
+<li><code>cd ~/GitHub/compass-rose-band-one-click</code></li>
+<li><code>git add .</code></li>
+<li><code>git commit -m &quot;Now with CRB site contents in ./site&quot;</code></li>
+<li><code>git push -u origin main</code></li>
+</ul>
+<h3 id="deploying-the-site-on-_netlifycom_">Deploying the Site on <em>Netlify.com</em></h3>
+<p>By default, pushing your changes to <em>Github</em> will automatically deploy them to your <em>Netlify.com</em> site, but you pushed to <code>main</code>, not <code>master</code>, so no synchornization is likely. But that&rsquo;s easy to fix.</p>
+<p>Navigate your browser to your <em>Netlify.com</em> &ldquo;team&rdquo; page, find your new project there, and click on <code>Site Settings</code>. Next you&rsquo;ll see options for things like changing the name of your project and site.  I changed mine to <code>compass-rose-band-one-click</code> to match my <em>Github</em> repo name.</p>
+<p>Visit the <code>Build &amp; Deploy</code> link in the menu on the left side of the page, find the <code>Deploy contexts</code> info and click <code>Edit settings</code> there so you can change the production branch setting from <code>master</code> to <code>main</code>.  Leave the default setting of &ldquo;Any pull request against your production branch / branch deploy branches&rdquo; selected.</p>
+<p>Next, visit the &ldquo;Deploys&rdquo; page in your <em>Netlify.com</em> project page at <code>https://app.netlify.com/sites/[project-name]/deploys</code>, mine is <a href="https://app.netlify.com/sites/compass-rose-band-one-click/deploys">https://app.netlify.com/sites/compass-rose-band-one-click/deploys</a>, and click the <code>Trigger deploy</code> button there.  You should then see a log of the deployment as it runs, and this time it should target your new <code>main</code> branch with your updated <code>./site</code> contents.</p>
+<p>If successful you should see a screen featuring a block like this one:</p>
+<p><figure>
+  <img src="http://localhost:1313/img/netlify-preview-deploy.png" alt="Successfuly deployed on &lt;em&gt;Netlify.com&lt;/em&gt;">
+  <figcaption></figcaption>
+</figure>
+</p>
+<p>Click on the <code>Preview deploy ⬈</code> link and voilà, your site!</p>
+<h2 id="now_netlify-cms_">Now&hellip;<em>Netlify CMS</em></h2>
+<p>It&rsquo;s getting late on this Sunday night so I&rsquo;ll share the first few lines from the latest copy of my new project&rsquo;s <code>./site/static/admin/config.yml</code> file for <em>Netlify CMS</em>.</p>
+<pre tabindex="0"><code>backend:
+  name: git-gateway
+  branch: main
+
+## To make local_backend mode work you must run &#39;npx netlify-cms-proxy-server&#39; in its own terminal window
+##   from the project root.  See https://www.netlifycms.org/docs/beta-features/ for details.
+local_backend: true
+
+media_folder: site/static/img    
+public_folder: /img
+...
+</code></pre><h3 id="whats-all-that">What&rsquo;s All That?</h3>
+<p>I&rsquo;m back, as promised, and you&rsquo;re probably asking what all that stuff in the <code>config.yml</code> file is doing? Well, as mentioned earlier, the simple <code>backend:</code> section (first three lines) links the CMS to the <code>main</code> branch of our new <em>Github</em> project.  The rest isn&rsquo;t required, unless you also want to use the CMS on a local clone of the project, like when making mass edits locally.</p>
+<p>Let me try to explain.</p>
+<h3 id="local_backend-a-_netlify-cms_-beta-feature"><code>local_backend:</code> A <em>Netlify CMS</em> Beta Feature</h3>
+<p>If you visit the <em>Netlify CMS</em>&rsquo; <a href="https://www.netlifycms.org/docs/beta-features/">Beta Features!</a> pages you&rsquo;ll see <code>local_backend</code> mentioned near the very top. [<em>Note that as a beta feature this information is bound to move at some point.</em>] That feature enables configuration of an option to make the CMS avaialble when working locally on a cloned, presumably, copy of the <em>Github</em> repository.  The beta documentation mentions running <code>npx netlify-cms-proxy-server</code> as part of the process.</p>
+<h3 id="a-local-problem-with-site--no-not-really">A Local Problem with <code>./site</code>?  No, Not Really</h3>
+<p>So, in the local clone of my new <em>Compass Rose Band</em> one-click <em>Hugo</em> website, the &ldquo;one-click&rdquo; <em>Netlify CMS</em> parts live in the project&rsquo;s root directory, and the <em>Hugo</em> site lives just &ldquo;below&rdquo; it in <code>./site</code>.  Accordingly my <code>media_folder:</code> setting shown above includes the <code>site/</code> prefix, and the same is true of all the <code>config.yml</code> keys that end in <code>folder:</code>.  This is correct for production, and it also works with a local clone IF I launch things correctly!</p>
+<p><em>Hugo</em> and the <code>hugo server</code> command that I need to preview local changes demands that I either <code>cd site</code> before I run it, or override the command&rsquo;s path by specifying <code>hugo server -s site</code>.  Only this 2nd approach works!</p>
+<p>So the process that&rsquo;s needed for local development and testing, including <em>Netlify CMS</em> looks like this for me:</p>
+<ul>
+<li>If I don&rsquo;t yet have the project locally I will begin with&hellip;
+<code>cd ~/GitHub; git clone --recursive https://github.com/SummittDweller/compass-rose-band-one-click; cd compass-rose-band-one-click</code></li>
+<li>If I already have a local clone I&rsquo;ll do this&hellip;
+<code>cd ~/GitHub/compass-rose-band-one-click; git pull</code></li>
+</ul>
+<p>From here on out there&rsquo;s just one process, like so&hellip;</p>
+<ul>
+<li><code>npx netlify-cms-proxy-server</code>   ⬅ In a new terminal window. See next section of this post.</li>
+<li><code>atom .</code>  ⬅ Launch <em>Atom</em> in the working directory.</li>
+<li><code>hugo server -s site</code>  ⬅ <strong>Important:</strong> Don&rsquo;t forget the <code>-s site</code> option!</li>
+<li>Create and edit files as needed. Changes should be immediately visible in <code>http://localhost:1313</code>.</li>
+<li>To edit or create content using <em>Netlify CMS</em>, just visit <code>http://localhost:1313/admin/</code>.</li>
+<li>When all changes are complete&hellip;
+<ul>
+<li><code>git add .</code></li>
+<li><code>git commit -m &quot;a brief message here&quot;</code></li>
+<li><code>git push</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="requires-_npx_-part-of-_nodejs_">Requires <em>npx</em>, Part of <em>Node.js</em></h3>
+<p>The <code>npx</code> command mentioned above requires that <em>npx</em> be installed, and it&rsquo;s part of <em>Node.js</em>.  To make it run properly I followed guidance from <a href="https://treehouse.github.io/installation-guides/mac/node-mac.html">https://treehouse.github.io/installation-guides/mac/node-mac.html</a> to ensure both were installed.  In at least one instance I also had to run <code>brew upgrade node</code> and <code>npm i -g npx</code> to ensure that <em>Node.js</em> was up-to-date, and that <em>npx</em> was available as needed.</p>
+<p>The <code>npx netlify-cms-proxy-server</code>, loads and runs the <em>netlify-cms-proxy-server</em> script, and in doing so it will tie up your terminal window.  So, it&rsquo;s best to <strong>do this in a separate terminal window!</strong>  Don&rsquo;t put the command in the background (using a <code>&amp;</code> flag at the end) as this won&rsquo;t allow you to see if the command is working properly. When you run this command you should see some feedback from the script indicating what it is doing. The script binds to your working directory then effectively routes all <em>Netlify CMS</em> actions, performed in this instance via <code>http://localhost:1313/admin/</code>, to the local <em>git</em> repo there.</p>
+<h2 id="ok-now-we-need-a-proper-domain">Ok, Now We Need a Proper Domain</h2>
+<p>So, in its original form the <em>Compass Rose Band</em> site is aliased to three different domains:</p>
+<ul>
+<li><a href="https://compassroseband.net">https://compassroseband.net</a>,</li>
+<li><a href="https://thecompassroseband.com">https://thecompassroseband.com</a>, and</li>
+<li><a href="https://thecompassroseband.net">https://thecompassroseband.net</a></li>
+</ul>
+<p>I choose to try migrating these domains to the new <em>Netlify.com</em> site one-at-a-time, starting with the least-used domain, <em>thecompassroseband.net</em>.</p>
+<p>To do this I started by visiting my <em>Netlify.com</em> account/team and the <code>Domains</code> menu, then my project-specific domain settings at <a href="https://app.netlify.com/teams/summittdweller/dns/thecompassroseband.net">https://app.netlify.com/teams/summittdweller/dns/thecompassroseband.net</a>.  In this page I&rsquo;m given a list of 4 <em>Netlify.com</em> name servers that I can use for this particular project.  I made note of the four before moving on.</p>
+<p>Next step was to visit my registrar, <em>enom.com</em>, where I have a control screen for editing DNS records and name servers.  I set the name server values for <em>thecompassroseband.net</em> there to the values that <em>Netlify.com</em> provided. And then, we wait&hellip; for the changes to propogate.</p>
+<p>Fortunately, <em>Netlify.com</em> is on the ball&hellip; when I visit my new site&rsquo;s domain controls page, <a href="https://app.netlify.com/sites/compass-rose-band-one-click/settings/domain">https://app.netlify.com/sites/compass-rose-band-one-click/settings/domain</a>, I find a widget that looks like this:</p>
+<p><figure>
+  <img src="http://localhost:1313/img/netlify-dns-propogation.png" alt="DNS Propogation">
+  <figcaption></figcaption>
+</figure>
+</p>
+<p>The cog behind &ldquo;Waiting on DNS propagation&rdquo; is spinning while <em>Netlify.com</em> waits for the transfer to happen.  So, I&rsquo;m going to go for a walk and see what that cog looks like in an hour or two.</p>
+<hr/>
+<p>Clear as mud?  Give it a try, and hopefully it will begin to make sense.  Until next time&hellip;</p>
+
+      </p>
+    </article>
+
+
+  </main>
+
+<footer>
+  <div class="footer_text">
+      <div>
+        <h3>Hi, <a href="index.html">I'm Mark</a></h3>
+        <p>
+          My real name is Mark McFate. <b>Summitt Dweller</b> was originally my <i>Geocaching.com</i> player name, and it still is, but I've applied it to a number of other pursuits over the years.  So, welcome to my personal blog.  FYI: I also have a "professional" blog at https://static.grinnell.edu/dlad-blog for all things related to my "real" work at Grinnell College, where I've been the 'Digital Library Applications Developer' since September 2012.
+
+        </p>
+      </div>
+      
+      <div>
+          <h3><a href="https://www.flickr.com/photos/97761917@N02/">Photo Stream</a></h3>
+          <div id="photos"></div>
+        </div>
+      </div>
+      
+  </div>
+
+  <hr/>
+  <div class="build-info">Updated: Apr 1, 2023 at 8:47am CDT</div>
+
+  
+    <div class="footer_copyright">
+      &copy; 2023 <a href="index.html">Mark McFate</a>
+       - Made in Toledo, Iowa
+    </div>
+  
+</footer>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/2.2.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.2.14/js/lightgallery-all.min.js" charset="utf-8"></script>
+    <script src="http://localhost:1313/js/weblog.js" charset="utf-8"></script>
+    
+
+    <script type="text/javascript">
+
+  
+  $(function() {
+    
+    $.getJSON("https://api.flickr.com/services/feeds/photos_public.gne?id=97761917@N02&format=json&jsoncallback=?", function(data) {
+      iweblog.application.displayImages(data, 8);
+    });
+  });
+
+</script>
+
+    
+
+    
+    
+    
+    
+  </body>
+</html>
+

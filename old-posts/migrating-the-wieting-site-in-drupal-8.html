@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="http://localhost:1313/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mark McFate">
+    <meta name="description" content="Personal weblog of web professional, geocacher, camper, and volunteer, Mark McFate.">
+    <meta name="generator" content="Hugo 0.111.2">
+
+    
+    <title>Migrating the Wieting Site in Drupal 8 &middot; @Summitt Dweller’s Personal Blog</title>
+
+    <link rel="stylesheet" href="http://localhost:1313/css/weblog.css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.2.14/css/lightgallery.min.css" type="text/css" />
+    <link rel="stylesheet" href="http://localhost:1313/css/custom.css" media="screen" charset="utf-8" type="text/css" />
+
+
+    
+	    <link href="http://localhost:1313/index.xml" rel="alternate" type="application/rss+xml" title="Personal Blog" />
+	  
+
+    
+        
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+      crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin=""></script>
+
+
+<link rel="stylesheet" href="https://unpkg.com/@raruto/leaflet-elevation@1.1.1/dist/leaflet-elevation.css" />
+<script src="http://localhost:1313/js/leaflet.elevation.js"></script>
+
+
+<script src="http://localhost:1313/js/leaflet.hugo.js"></script>
+
+
+<link rel="stylesheet" href="http://localhost:1313/css/leaflet.extra-markers.min.css">
+<script src="http://localhost:1313/js/leaflet.extra-markers.min.js"></script>
+
+<style>
+    .fa-icon-marker {
+        text-align: center;
+        width: 100%;
+    }
+    .download-track {
+        background-color: #e1e1e1;
+        text-align: center;
+        margin-bottom: 25px;
+        border-radius: 0 0 10px 10px;
+        cursor: pointer;
+    }
+</style>
+
+    
+    <script src="http://localhost:1313/js/checkTweetDate.js" type="text/javascript"></script>
+
+    
+    <script>
+      var _paq = window._paq = window._paq || [];
+       
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+        var u="//analytics.summittservices.com/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '10']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+
+  </head>
+  <body class="site">
+
+<header>
+  <nav>
+    <h1><a href="http://localhost:1313/">@Summitt Dweller</a>’s Personal Blog.</h1>
+    <div class="menu">
+		
+			
+			<ul>
+				
+				<li>
+					<a href="http://localhost:1313/microposts/">Microposts</a>
+					
+						<a href="http://localhost:1313/microposts/index.xml"><img src="http://localhost:1313/img/rss.svg" class="rss-icon" /></a>
+					
+				</li>
+				
+				<li>
+					<a href="../../../index.html">Posts</a>
+					
+						<a href="../../../index.xml"><img src="http://localhost:1313/img/rss.svg" class="rss-icon" /></a>
+					
+				</li>
+				
+				<li>
+					<a href="http://localhost:1313/photos/">Photos</a>
+					
+						<a href="http://localhost:1313/photos/index.xml"><img src="http://localhost:1313/img/rss.svg" class="rss-icon" /></a>
+					
+				</li>
+				
+				<li>
+					<a href="http://localhost:1313/onetabs/">OneTabs</a>
+					
+				</li>
+				
+				
+			</ul>
+		
+    </div>
+  </nav>
+</header>
+
+
+  <main class="content">
+
+    <article class="post">
+      
+        <h2><a rel="full-article" href="index.html">Migrating the Wieting Site in Drupal 8</a></h2>
+      
+
+      <div class="postmeta">Posted on <time datetime="2020-02-28 00:00:00 &#43;0000 UTC" pubdate="">February 28, 2020</time>
+        
+          from Toledo, Iowa
+        
+        <span class="categories">
+          
+        </span>
+      </div>
+
+      <p>
+        <h1 id="migrating-the-wieting-site-in-drupal-8">Migrating the Wieting Site in Drupal 8</h1>
+<p>Sorry for my extended absence here, I&rsquo;ve been uber-busy with work, but have also been able to work a little (lots of long nights and weekends) on a long-overdue update of <a href="https://Wieting.TamaToledo.com">https://Wieting.TamaToledo.com</a> in <em>Drupal 8</em>.  It&rsquo;s true, I have been thinking about moving that site to make it static, almost certainly using <em>Hugo</em>, but I thought before doing so I&rsquo;d give <em>Drupal 8</em> one more try.  I&rsquo;m pleased to report that it&rsquo;s working nicely again.  Here&rsquo;s how I did it, and how I plan to keep it updated&hellip;</p>
+<h2 id="saved-by-docker-compose-drupal">Saved by &ldquo;docker-compose-drupal&rdquo;</h2>
+<p>I actually started the process of migrating and updating <a href="https://wieting.tamatoledo.com">the Wieting website</a> in <em>Docksal</em>, but I failed&hellip; I could never figure out how to reliably and easily push my work to production from there.  <em>Docksal</em> just seems to wrap so much of itself into the <code>cli</code> container that drives it, I found it difficult to de-couple from that in production.</p>
+<p>So I went looking elsewhere and discovered <a href="https://devwithlando.org">Lando</a>, and I did considerable work with it because <em>Lando</em>, at least in the case of <em>Drupal</em>, builds a 3-part development stack that looks a lot like what I wanted to deploy in production.  The parts of a <em>Lando</em> stack, and my production stack, are the same:</p>
+<ul>
+<li>An <code>nginx</code> web server container,</li>
+<li>A <code>mysql</code> or <code>mariadb</code> database container, and</li>
+<li>A <code>php</code> codebase container.</li>
+</ul>
+<p>But once again I had trouble figuring out exactly how to push that development stack to production.  So, I went looking again for an open (and by that I mean &ldquo;free&rdquo; and freely modifiable) production-ready stack configuration that uses the 3-parts I had in mind.  I found <a href="https://github.com/mogtofu33/docker-compose-drupal">docker-compose-drupal</a> and almost immediately created <a href="https://github.com/SummittDweller/docker-compose-drupal">my own fork</a> of that project. Using <a href="https://github.com/SummittDweller/docker-compose-drupal">my <code>docker-compose-drupal</code> fork</a> I set off to build a production instance, NOT a development instance, on my <code>summitt-dweller-DO-docker</code> droplet at <em>DigitalOcean</em>.  That project came to life in <code>/opt/docker-compose-drupal</code> there.</p>
+<p>The evolution of <code>summitt-dweller-DO-docker:/opt/docker-compose-drupal</code> was quite an adventure, in large part because the <em>Wieting&rsquo;s</em> web site had gone almost a year without any updates.  That meant upgrading the <em>Drupal</em> core from version 8.2.? to version 8.8.2, along with countless modules that had changed rather dramatically, so there were lots of bumps along the way.  I also had to move the site from a multi-site configuration, the old site lived in a container at <code>/var/www/html/web/sites/wieting</code>, to a <em>default</em> configuration that lives in the container at <code>/var/www/localhost/web/sites/default</code>.</p>
+<p>Fortunately, <a href="https://github.com/mogtofu33/docker-compose-drupal">docker-compose-drupal</a> includes some nice scripts and features to help with things like that, and they are nicely documented in the <a href="https://github.com/mogtofu33/docker-compose-drupal/blob/master/README.md">project&rsquo;s README.md</a> file.  I&rsquo;ll elaborate on a few of the key features later in this post, but most of what I did during the migration and update is water-under-the-bridge, and should not need to be repeated, ever, so I won&rsquo;t elaborate on all of it here.  It&rsquo;s worth noting here that the work I did in my fork all happened in a branch named <code>wieting</code>.</p>
+<h2 id="moved-to-wieting-d8-do">Moved to &ldquo;wieting-D8-DO&rdquo;</h2>
+<p>Once I had a new site working as I&rsquo;d hoped, I wanted to begin a fresh new development and update cycle, so I used a process I&rsquo;ve documented in my work blog: <a href="https://static.grinnell.edu/blogs/McFateM/posts/065-create-new-github-project-from-a-branch/">&ldquo;How to Create a New GitHub Repo from an Existing Branch&rdquo;</a>. That work created the <em>Wieting</em> site&rsquo;s new home, <a href="https://github.com/SummittDweller/wieting-D8-DO">https://github.com/SummittDweller/wieting-D8-DO</a>, based on the <em>wieting</em> branch of the aforementioned fork of <em>docker-compose-drupal</em>.</p>
+<h2 id="site-update-workflow">Site Update Workflow</h2>
+<p>Having built the <a href="https://github.com/SummittDweller/wieting-D8-DO">wieting-D8-DO</a> project I need a reliable workflow that I could use to keep it up-to-date.  I created that workflow by migrating the existing production site at <code>summitt-dweller-DO-docker:/opt/docker-compose-drupal</code>, where it responded as <em><a href="https://Wieting.TamaToledo.org">https://Wieting.TamaToledo.org</a></em>, to a new staging copy at <code>summitt-dweller-DO-docker:/opt/wieting-D8-DO</code>, where it would respond, temporarily, at my designated &ldquo;staging&rdquo; address, <em><a href="https://Wieting.SummittServices.com">https://Wieting.SummittServices.com</a></em>.</p>
+<p>While working as <em>administrator</em> on <code>summitt-dweller-DO-docker</code> the entire command-line process looked like this:</p>
+<pre tabindex="0"><code>echo $(date --iso-8601)
+cd /opt/docker-compose-drupal
+git ls-files --others --ignored --exclude-standard &gt; $(date --iso-8601).ignored.list
+tar czvf $(date --iso-8601).ignored.list.tar.gz --files-from $(date --iso-8601).ignored.list
+gpg --encrypt --recipient summitt.dweller@gmail.com $(date --iso-8601).ignored.list.tar.gz
+rm -fr $(date --iso-8601).ignored.list.tar.gz
+cd /opt
+git clone https://github.com/SummittDweller/wieting-D8-DO.git
+cd wieting-D8-DO
+cp -f ../docker-compose-drupal/2020-02-27.ignored.list.tar.gz.gpg .
+gpg --decrypt 2020-02-27.ignored.list.tar.gz.gpg &gt; ignored.tar.gz
+tar xzvf ignored.tar.gz
+rm -f ignored.tar.gz
+cd ../docker-compose-drupal
+scripts/mysql dump
+mv -f database/dump/dump.sql /opt/wieting-D8-DO/database/mysql-init
+cd /opt/wieting-D8-DO
+nano .env
+nano docker-compose.yml
+docker-compose up -d
+</code></pre><h3 id="breaking-the-workflow-down">Breaking the Workflow Down</h3>
+<p>Moving the site from <code>/opt/docker-compose-drupal</code> and <a href="https://Wieting.TamaToledo.com">https://Wieting.TamaToledo.com</a>, to <code>/opt/wieting-D8-DO</code> and <a href="https://Wieting.SummittServices.com">https://Wieting.SummittServices.com</a> is a command-line process like this, with comments&hellip;</p>
+<table>
+<thead>
+<tr>
+<th>Comments / Commands</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td># Set the working directory to the server&rsquo;s project root, then <code>git clone</code> the <em>wieting-D8-DO</em> project.<br/> <code>cd /opt</code> <br/> <code>git clone https://github.com/SummittDweller/wieting-D8-DO.git</code></td>
+</tr>
+<tr>
+<td># Save today&rsquo;s date in ISO 8601 format to <code>${today}</code>; we will use it a few times later on. <br/> <code>today=$(date --iso-8601)</code></td>
+</tr>
+<tr>
+<td># Set working directory to the initial project. Put the site into &lsquo;maintenance_mode&rsquo;, flush all caches, dump a copy of the project&rsquo;s database, move previously dumped databases to an <em>.inactive</em> directory, and move the dumped database so it will initialze the new site upon startup. <br/> <code>cd /opt/docker-compose-drupal</code> <br/> <code>scripts/drush sset system.maintenance_mode 1 --input-format=integer</code> <br/> <code>scripts/drush cr</code> <br/> <code>scripts/mysql dump -f dump_${today}.sql</code> <br/> <code>mv -f /opt/wieting-D8-DO/database/mysql-init/*.sql /opt/wieting-D8-DO/database/mysql-init/.inactive/</code> <br/> <code>mv -f database/dump/dump_${today}.sql /opt/wieting-D8-DO/database/mysql-init/</code></td>
+</tr>
+<tr>
+<td># Fetch a list of ignored files, then <em>tar</em> the ignored files to make an archive, and encrypt the tarball for security purposes, then remove the itermediate tarball. <br/> <code>git ls-files --others --ignored --exclude-standard &gt; ${today}.ignored.list</code> <br/> <code>tar czvf ${today}.ignored.list.tar.gz --files-from ${today}.ignored.list</code> <br/> <code>gpg --encrypt --recipient summitt.dweller@gmail.com ${today}.ignored.list.tar.gz</code> <br/> <code>rm -fr ${today}.ignored.list.tar.gz</code></td>
+</tr>
+<tr>
+<td># Now set the working directory to the new project, copy the tarball from the old site to the new one, decrypt and then restore/extract the tarball contents, and finally, remove the intermediate tarball. <br/> <code>cd /opt/wieting-D8-DO</code> <br/> <code>cp -f ../docker-compose-drupal/${today}.ignored.list.tar.gz.gpg .</code> <br/> <code>gpg --decrypt ${today}.ignored.list.tar.gz.gpg &gt; ignored.tar.gz</code> <br/> <code>tar xzvf ignored.tar.gz</code> <br/> <code>rm -f ignored.tar.gz</code></td>
+</tr>
+<tr>
+<td># Working in the new directory, edit the <em>.env</em> file to set <code>PROJECT_NAME</code>, <code>NGINX_HOST_HTTP_PORT</code> and <code>NGINX_HOST_HTTPS_PORT</code> that won&rsquo;t conflict with existing names. <br/> <code>nano .env</code></td>
+</tr>
+<tr>
+<td># Still in the new directory, edit the <em>docker-compose.yml</em> file to set the <em>nginx</em> service <code>labels:</code> to include  <code>traefik.frontend.rule=Host:wieting.SummittServices.com</code>, to properly address the new site. <br/> <code>nano docker-compose.yml</code></td>
+</tr>
+<tr>
+<td># Spin up the new site for testing. <br/> <code>docker-compose up -d</code></td>
+</tr>
+<tr>
+<td># Turn off &lsquo;maintenance_mode&rsquo; in both sites. <br/> <code>/opt/docker-compose-drupal/scripts/drush sset system.maintenance_mode 0 --input-format=integer</code> <br/> <code>/opt/wieting-D8-DO/scripts/drush sset system.maintenance_mode 0 --input-format=integer</code></td>
+</tr>
+</tbody>
+</table>
+<p>That worked nicely!  Time to end this saga, but I&rsquo;ll return shortly, in another post, to document my workflow for ongoing maintenance and updates.  Until next time&hellip;</p>
+
+      </p>
+    </article>
+
+
+  </main>
+
+<footer>
+  <div class="footer_text">
+      <div>
+        <h3>Hi, <a href="index.html">I'm Mark</a></h3>
+        <p>
+          My real name is Mark McFate. <b>Summitt Dweller</b> was originally my <i>Geocaching.com</i> player name, and it still is, but I've applied it to a number of other pursuits over the years.  So, welcome to my personal blog.  FYI: I also have a "professional" blog at https://static.grinnell.edu/dlad-blog for all things related to my "real" work at Grinnell College, where I've been the 'Digital Library Applications Developer' since September 2012.
+
+        </p>
+      </div>
+      
+      <div>
+          <h3><a href="https://www.flickr.com/photos/97761917@N02/">Photo Stream</a></h3>
+          <div id="photos"></div>
+        </div>
+      </div>
+      
+  </div>
+
+  <hr/>
+  <div class="build-info">Updated: Apr 1, 2023 at 8:47am CDT</div>
+
+  
+    <div class="footer_copyright">
+      &copy; 2023 <a href="index.html">Mark McFate</a>
+       - Made in Toledo, Iowa
+    </div>
+  
+</footer>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/2.2.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.2.14/js/lightgallery-all.min.js" charset="utf-8"></script>
+    <script src="http://localhost:1313/js/weblog.js" charset="utf-8"></script>
+    
+
+    <script type="text/javascript">
+
+  
+  $(function() {
+    
+    $.getJSON("https://api.flickr.com/services/feeds/photos_public.gne?id=97761917@N02&format=json&jsoncallback=?", function(data) {
+      iweblog.application.displayImages(data, 8);
+    });
+  });
+
+</script>
+
+    
+
+    
+    
+    
+    
+  </body>
+</html>
+
