@@ -12,7 +12,8 @@ from calendar import timegm
 from bs4 import BeautifulSoup
 from string import Template
 
-dr = "./old-posts"  # sys.argv[1]
+dr = "./old-microposts"  
+dr = sys.argv[1]
 
 count = 0
 posts_as_string = ""

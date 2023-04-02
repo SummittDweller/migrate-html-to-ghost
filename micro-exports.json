@@ -1,0 +1,239 @@
+{
+  "meta": {
+    "exported_on": 1680406183,
+    "version": "5.39.0"
+  },
+  "data": {
+    "posts": [
+            
+      
+      {
+        "id": "4",
+        "title": "salt.html",
+        "mobiledoc": "{ \"version\":\"0.3.1\", \"markups\":[], \"atoms\":[], \"cards\":[[\"html\", { \"cardName\":\"html\", \"html\":\"Tom's reaction when we popped over the hill to see the Bonneville salt flats was holy shit.\" }]], \"sections\":[[10, 0]] }",
+        "type": "post",
+        "status": "published",
+        "published_at": 1661108400000,
+        "custom_excerpt": "---\ntype: micropost\nlocation: West Wendover, NV\n---"
+      }
+
+,
+      
+      {
+        "id": "5",
+        "title": "matomo-notes.html",
+        "mobiledoc": "{ \"version\":\"0.3.1\", \"markups\":[], \"atoms\":[], \"cards\":[[\"html\", { \"cardName\":\"html\", \"html\":\"Last weekend Mackenzie and I created a new Matomo analytics server on a DigitalOcean droplet w/ 2G of RAM. The story of its development and maintenance is being told in Matomo Installation Notes and its dashboard is available at https://analytics.summittservices.com.\" }]], \"sections\":[[10, 0]] }",
+        "type": "post",
+        "status": "published",
+        "published_at": 1679040960000,
+        "custom_excerpt": "---\ntype: micropost\nlocation: Grinnell, IA\n---"
+      }
+
+,
+      
+      {
+        "id": "6",
+        "title": "hugo-mod-local.html",
+        "mobiledoc": "{ \"version\":\"0.3.1\", \"markups\":[], \"atoms\":[], \"cards\":[[\"html\", { \"cardName\":\"html\", \"html\":\"Today I discovered a slick trick for local development of my first Hugo Module. The guidance I used was found in Working with Hugo Module Locally and it was spot-on! In my case the key was the additon of one line, two if you include the comment, to my project's config.yml file:<br/>// Innocent line below!<br/>replace github.com/SummittDweller/hugo-timeline => /Users/mark/GitHub/hugo-timeline<br/>\" }]], \"sections\":[[10, 0]] }",
+        "type": "post",
+        "status": "published",
+        "published_at": 1671386400000,
+        "custom_excerpt": "---\ntype: micropost\nlocation: Toledo, IA\n---"
+      }
+
+,
+      
+      {
+        "id": "7",
+        "title": "relearning-11ty.html",
+        "mobiledoc": "{ \"version\":\"0.3.1\", \"markups\":[], \"atoms\":[], \"cards\":[[\"html\", { \"cardName\":\"html\", \"html\":\"As I started to follow-up on Gating My Content & More - Parts 1 and 2 I quickly realized that I've already forgotten most of what I learned about eleventy back in December. So, since I already have years of Hugo experience, I elected to begin again with Migrating from Hugo to Eleventy and that article makes an early reference to A Deep Dive Into Eleventy Static Site Generator. If those fail there's Let's Learn Eleventy.In case it's needed later, I captured all of the sites listed above in a OneTab page.\" }]], \"sections\":[[10, 0]] }",
+        "type": "post",
+        "status": "published",
+        "published_at": 1675706400000,
+        "custom_excerpt": "---\ntype: micropost\nlocation: Toledo, IA\n---"
+      }
+
+,
+      
+      {
+        "id": "8",
+        "title": "how-to-adjust-a-bike-helmet.html",
+        "mobiledoc": "{ \"version\":\"0.3.1\", \"markups\":[], \"atoms\":[], \"cards\":[[\"html\", { \"cardName\":\"html\", \"html\":\"Found Video - How to Adjust a Bicycle 🚴🏽 Helmet a short time ago. 🙂\" }]], \"sections\":[[10, 0]] }",
+        "type": "post",
+        "status": "published",
+        "published_at": 1678125600000,
+        "custom_excerpt": "---\ntype: micropost\nlocation: Toledo, IA\n---"
+      }
+
+,
+      
+      {
+        "id": "9",
+        "title": "removed-title-display-from-microposts-like-this-one.html",
+        "mobiledoc": "{ \"version\":\"0.3.1\", \"markups\":[], \"atoms\":[], \"cards\":[[\"html\", { \"cardName\":\"html\", \"html\":\"This morning I modified .eleventy.js to remove post.title display from all micropost 🔬 type posts, like this one. 🙂 Now, maybe I'll also add the little microscope icon automatically?\" }]], \"sections\":[[10, 0]] }",
+        "type": "post",
+        "status": "published",
+        "published_at": 1680249300000,
+        "custom_excerpt": "---\ntype: micropost\nlocation: Toledo, IA\n---"
+      }
+
+,
+      
+      {
+        "id": "10",
+        "title": "21pilots.html",
+        "mobiledoc": "{ \"version\":\"0.3.1\", \"markups\":[], \"atoms\":[], \"cards\":[[\"html\", { \"cardName\":\"html\", \"html\":\"T-Mobile Arena downtown Kansas City for Twenty-one Pilots. And I am probably not the oldest person here after all.\" }]], \"sections\":[[10, 0]] }",
+        "type": "post",
+        "status": "published",
+        "published_at": 1662663600000,
+        "custom_excerpt": "---\ntype: micropost\nlocation: Kansas City,MO\n---"
+      }
+
+,
+      
+      {
+        "id": "12",
+        "title": "testing-m-ef-bf-bcy-new-publisher-for-ghost-app-on-iphone.html",
+        "mobiledoc": "{ \"version\":\"0.3.1\", \"markups\":[], \"atoms\":[], \"cards\":[[\"html\", { \"cardName\":\"html\", \"html\":\"Testing my new 'Publisher for Ghost' app on iPhone... yup, it worked!\" }]], \"sections\":[[10, 0]] }",
+        "type": "post",
+        "status": "published",
+        "published_at": 1679496120000,
+        "custom_excerpt": "---\ntype: micropost\nlocation: Tama, IA\n---"
+      }
+
+,
+      
+      {
+        "id": "13",
+        "title": "azure-extensions-for-vscode.html",
+        "mobiledoc": "{ \"version\":\"0.3.1\", \"markups\":[], \"atoms\":[], \"cards\":[[\"html\", { \"cardName\":\"html\", \"html\":\"Web Nirvana? It dawned on me this morning that both VSCode and Azure are Microsoft things. So, there should be some handy Azure extensions for VSCode, right? Yes, yes indeed there are! I'm installing them now!\" }]], \"sections\":[[10, 0]] }",
+        "type": "post",
+        "status": "published",
+        "published_at": 1668880800000,
+        "custom_excerpt": "---\ntype: micropost\nlocation: Toledo, IA\n---"
+      }
+
+,
+      
+      {
+        "id": "14",
+        "title": "gotta-love-hugo.html",
+        "mobiledoc": "{ \"version\":\"0.3.1\", \"markups\":[], \"atoms\":[], \"cards\":[[\"html\", { \"cardName\":\"html\", \"html\":\"Ya' gotta love Hugo! I just completed my first Jekyll-to-Hugo conversion, and made it a Hugo module. It's taken me a couple of years to realize the power of Hugo modules, and I have to say it's AWESOME, and perfectly implemented.The process of conversion briefly is documented in the README.md file at SummittDweller/hugo-timeline, and the first use of it as a module appears elsewhere in this blog at My Hugo Timeline, A New Hugo Module. The timeline itself can be seen at https://blog.SummittDweller.com/timeline. Check it out!\" }]], \"sections\":[[10, 0]] }",
+        "type": "post",
+        "status": "published",
+        "published_at": 1670263200000,
+        "custom_excerpt": "---\ntype: micropost\nlocation: Toledo, IA\n---"
+      }
+
+,
+      
+      {
+        "id": "15",
+        "title": "tama-walkingaudit.html",
+        "mobiledoc": "{ \"version\":\"0.3.1\", \"markups\":[], \"atoms\":[], \"cards\":[[\"html\", { \"cardName\":\"html\", \"html\":\"Tama walking audit...downtown and to Cherry Lake.\" }]], \"sections\":[[10, 0]] }",
+        "type": "post",
+        "status": "published",
+        "published_at": 1663182000000,
+        "custom_excerpt": "---\ntype: micropost\nlocation: Tama,IA\n---"
+      }
+
+,
+      
+      {
+        "id": "16",
+        "title": "dns-and-azure-email-changes.html",
+        "mobiledoc": "{ \"version\":\"0.3.1\", \"markups\":[], \"atoms\":[], \"cards\":[[\"html\", { \"cardName\":\"html\", \"html\":\"Last evening I successfully completed a move of ItalianoWoods.com from a defunct presence on DigitalOcean to a landing site and working email via Azure and Azure DNS. Details can be found in a few places, including:- https://github.com/SummittDweller/how-MY-web-works/blob/main/docs/05-italianowoods.com.md- https://github.com/SummittDweller/how-MY-web-works/blob/main/docs/101-DigitalOcean.md- https://github.com/SummittDweller/italiano-woods-11ty-landing-page\" }]], \"sections\":[[10, 0]] }",
+        "type": "post",
+        "status": "published",
+        "published_at": 1677693600000,
+        "custom_excerpt": "---\ntype: micropost\nlocation: Toledo, IA\n---"
+      }
+
+,
+      
+      {
+        "id": "17",
+        "title": "adding-fontawesome-to-wieting-site.html",
+        "mobiledoc": "{ \"version\":\"0.3.1\", \"markups\":[], \"atoms\":[], \"cards\":[[\"html\", { \"cardName\":\"html\", \"html\":\"Applied Inline FontAwesome SVGs in Hugo to the Hugo theme for the Wieting web site.\" }]], \"sections\":[[10, 0]] }",
+        "type": "post",
+        "status": "published",
+        "published_at": 1678212000000,
+        "custom_excerpt": "---\ntype: micropost\nlocation: Toledo, IA\n---"
+      }
+
+,
+      
+      {
+        "id": "18",
+        "title": "rawlins.html",
+        "mobiledoc": "{ \"version\":\"0.3.1\", \"markups\":[], \"atoms\":[], \"cards\":[[\"html\", { \"cardName\":\"html\", \"html\":\"Posting an updated itinerary for eastbound day 3.\" }]], \"sections\":[[10, 0]] }",
+        "type": "post",
+        "status": "published",
+        "published_at": 1661108400000,
+        "custom_excerpt": "---\ntype: micropost\nlocation: Rawlins, WY\n---"
+      }
+
+,
+      
+      
+      {
+        "id": "20",
+        "title": "dick.html",
+        "mobiledoc": "{ \"version\":\"0.3.1\", \"markups\":[], \"atoms\":[], \"cards\":[[\"html\", { \"cardName\":\"html\", \"html\":\"Planning a lunch stop in Grand Island with Heartland Cacher and then on home to Iowa so Reviewer Smith can get back to Illinois this evening.\" }]], \"sections\":[[10, 0]] }",
+        "type": "post",
+        "status": "published",
+        "published_at": 1661194800000,
+        "custom_excerpt": "---\ntype: micropost\nlocation: North Platte, NE\n---"
+      }
+
+,
+      
+      {
+        "id": "21",
+        "title": "turned-hot-water-recirc-off.html",
+        "mobiledoc": "{ \"version\":\"0.3.1\", \"markups\":[], \"atoms\":[], \"cards\":[[\"html\", { \"cardName\":\"html\", \"html\":\"Turned off the hot water recirc at home, and treated one plant for mites.\" }]], \"sections\":[[10, 0]] }",
+        "type": "post",
+        "status": "published",
+        "published_at": 1678557600000,
+        "custom_excerpt": "---\ntype: micropost\nlocation: Toledo, IA\n---"
+      }
+
+,
+      
+      {
+        "id": "22",
+        "title": "rename-azure-subscription.html",
+        "mobiledoc": "{ \"version\":\"0.3.1\", \"markups\":[], \"atoms\":[], \"cards\":[[\"html\", { \"cardName\":\"html\", \"html\":\"Today I plan to follow the guidance found in Rename Azure Subscriptions and Find Your Environments Faster to fix the name of my personal Azure subscription 1, and maybe more. That's a horrible name, I know!Done! The new subscription name is SummittDweller Pay-As-You-Go. Much better!\" }]], \"sections\":[[10, 0]] }",
+        "type": "post",
+        "status": "published",
+        "published_at": 1675447200000,
+        "custom_excerpt": "---\ntype: micropost\nlocation: Toledo, IA\n---"
+      }
+
+,
+      
+      {
+        "id": "23",
+        "title": "ghost-this-weekend.html",
+        "mobiledoc": "{ \"version\":\"0.3.1\", \"markups\":[], \"atoms\":[], \"cards\":[[\"html\", { \"cardName\":\"html\", \"html\":\"Last weekend Mackenzie and I created a new Matomo analytics server on a DigitalOcean droplet w/ 2G of RAM. This weekend we created a new headless Ghost CMS droplet to support her portfolio site, and more.This evening I'm taking steps to begin rewriting this blog as a Ghost + 11ty reincarnation of what you see here now. The story of the underlying Ghost development and maintenance is told in Ghost Notes and its admin dashboard is available at https://ghost.summittservices.com/ghost.\" }]], \"sections\":[[10, 0]] }",
+        "type": "post",
+        "status": "published",
+        "published_at": 1679079600000,
+        "custom_excerpt": "---\ntype: micropost\nlocation: Toledo, IA\n---"
+      }
+
+,
+      
+      {
+        "id": "24",
+        "title": "reset-python.html",
+        "mobiledoc": "{ \"version\":\"0.3.1\", \"markups\":[], \"atoms\":[], \"cards\":[[\"html\", { \"cardName\":\"html\", \"html\":\"Reset Python environment on my Mac Mini using: https://dev.to/aditya005/right-way-to-uninstall-clean-python-on-a-mac-4jfo\" }]], \"sections\":[[10, 0]] }",
+        "type": "post",
+        "status": "published",
+        "published_at": 1666206000000,
+        "custom_excerpt": "---\ntype: micropost\nlocation: Toledo, IA\n---"
+      }
+    ]
+  }
+}
+

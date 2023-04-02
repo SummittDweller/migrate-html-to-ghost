@@ -7,4 +7,4 @@ dr = sys.argv[1]
 
 for root, dirs, files in os.walk(dr):
     for f in files:
-        shutil.move(root+"/"+f, "old-posts/"+root.split("/")[-1]+".html")
+        shutil.move(root+"/"+f, "old-microposts/"+root.split("/")[-1]+".html")
